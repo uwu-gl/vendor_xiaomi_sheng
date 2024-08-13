@@ -1,0 +1,219 @@
+# N81A setting file
+multiCameraLogicalXMLFile=sheng.xml
+
+multiCameraEnable=TRUE
+isPhyicalMultiCameraSupported=TRUE
+
+#supernight
+#https://xiaomi.f.mioffice.cn/sheets/shtk4rNloLn27Kka49Pv4kfbadu?sheet=4cGUqf
+MIVISuperNightSupportMask=0x3C130313
+SupernightSEManualEVMask=0x010113F1
+SupernightManualEVMask=0x010113F1
+SupernightSEManualEVMaskForTele=0x010118F1
+SupernightManualEVMaskForTele=0x010118F1
+SupernightSEManualEVMaskForUW=0x010122F1
+SupernightManualEVMaskForUW=0x010122F1
+UIRelatedMetas=xiaomi.supernight.checker|xiaomi.ai.misd.NonSemanticScene|xiaomi.ai.asd.asdExifInfo
+
+#camera log settings
+overrideLogLevels=0x0
+logInfoMask=0
+logWarningMask=0
+logConfigMask=0
+logVerboseMask=0
+logCoreCfgMask=0
+logRequestMapping=FALSE
+systemLogEnable=TRUE
+enableAsciiLogging=0
+enableTxtLogging=0
+enableCameraCoreDumpBinary=FALSE
+enableCameraCoreDumpText=FALSE
+raiserecoverysigabrt=FALSE
+offlineLoggerEnableBackupLog=FALSE
+numConsecutiveRecovery=10
+#For stability
+#enableSignal35Tombstone=FALSE
+
+# For CTS Reprocess Size
+minReprocessInputWidth=0x1FFF
+minReprocessInputHeight=0x1FFF
+
+#For 3rdEISV2
+is3rdEISV2Enabled=TRUE
+
+# Video EIS
+iseispreviewSupported=TRUE
+#Res1@FPS1|Res2@FPS2 ...,5--720P,6--1080P,8--4K,3001--8K
+vsquality=5@30|6@30|6@60|8@30|8@60
+enableOisEis=FALSE
+#Close eispro 1080 60 fps
+is1080p60fpseisSupported=FALSE
+isFrontVHdrSupported=FALSE
+isVideoHdrSupported=FALSE
+
+# SW Sync
+multiCameraExposureTimeMatchMask=0x1
+
+#enable mimotion
+isMiMotionSupported=TRUE
+
+#enablemimovie
+isVideoMimovieSupported=TRUE
+
+#Remap ISO
+EnableRemapISO=TRUE
+
+# TS skinbeautifier
+isBeautyVersion=67
+enableEGLCache=TRUE
+isBeautyOptionConfigSupported=1
+isBeautyRemoveNevusSupported=0
+isBeautyMakeupGenderSupported=0
+# beautyalgo manufactor: 0:arcsoft;1:truesight;2:other
+isBeautyManufactorAlgo=1
+
+#Video skinbeautifier
+isVideoBeautifierSupported=TRUE
+isVideoBeautyEISSupported=TRUE
+isVideoBeautyScreenshotSupported=TRUE
+
+#Video Filter
+isVideoFilterSupported=TRUE
+superVideoFilterVersion=1
+
+# Quickview
+enableCHIPartialData=1
+quickviewsupport=TRUE
+quickviewmask=0x2F03
+
+#flicker
+enableFlicker=TRUE
+enableFlickerCCT=FALSE
+enableSpectralSensor=1
+
+#Remap ISO
+EnableRemapISO=TRUE
+
+# Dynamic Fps Support
+is30fpsDynamicSupported=TRUE
+is60fpsDynamicSupported=TRUE
+dynamicFpsSupported=0@30|0@60|1@30
+
+#enable async parklens
+xiaomiAFParklensAsync=TRUE
+
+#Enable earlyPCR
+numPCRsBeforeStreamOn=1
+
+#sensor early Init thread
+isEarlysettingsEnable=TRUE
+
+#enable Actuator early init func
+isActuatorEarlyInitEnable=TRUE
+
+enableEarlyPipelineActivate=TRUE
+
+isNewAIAsd=TRUE
+disableFocusIndication=TRUE
+
+#BOKEH
+supportedBokehMask=0x1
+supportBokehOISMask=0x7
+ismfnrbokehsupported=TRUE
+BokehSlaveMfnrEnable=FALSE
+isMDbokehsupported=0
+bokehVendorID=0
+singlebokehvendorid=0x85
+enableRleaseCameraM2M=TRUE
+bokehFallbackSupported=0
+#Leica Vibrant - uw_in:uw_out|wide_in:wide_out|tele3x_in:tele3x_out|tele5x_in:tele5x_out
+bokehFallbackLuxThreshold0=453:413|445:405|453:413|453:413
+#Leica Authentic - uw_in:uw_out|wide_in:wide_out|tele3x_in:tele3x_out|tele5x_in:tele5x_out
+bokehFallbackLuxThreshold1=453:413|445:405|453:413|453:413
+BokehRemosaicLuxGain=95
+enableBokehReduceAuxInputSize=1
+SDK_LOG_LEVEL=4
+
+# portrait repair
+#Bit[0] - UI SAT support default not support
+#Bit[1] - algo SAT support default on
+#Bit[2] - UI Bokeh support default not support
+#Bit[3] - algo Bokeh support default on
+#Bit[4] - UI SuperNight support default not support
+#Bit[5] - algo SuperNight support default on
+isPortraitRepairSupportMask=0x26
+isLargeRamPortraitRepairSupportMask=0x26
+
+# N81A prune video nodes
+enablePruneVideoNodes=1
+
+enableFDFullStreamDimension=FALSE
+
+#enable AICamera
+enableAI=0
+overrideAIStrengthControlFactor=0
+
+#Enable GPU rotate
+enableGPURotation=TRUE
+
+# Bit Mask for HighQualityQuickShot Configure
+# Bit[0]     - Support MFNR/LLS in SAT Mode
+# Bit[1]     - Support HDR in SAT Mode
+# Bit[2]     - Support SR in SAT Mode
+# Bit[3]     - Support SuperNightSE in SAT Mode
+# Bit[4]     - Support HDRSR in SAT Mode
+# Bit[5~7]   - reserve
+# Bit[8]     - Support Bokeh MFNR in Back Camera
+# Bit[9]     - Support Bokeh HDR in Back Camera
+# Bit[10]    - Support MFNR in Front Camera
+# Bit[11]    - Support HDR in Front Camera
+# Bit[12]    - Support Bokeh in Front Camera
+# Bit[13]    - Support Macro Mode
+# Bit[14]    - Support Professional Mode
+# Bit[15]    - reserve
+# Bit[16~19] - HighQualityQuickShot Queue Length(max number of HighQualityQuickShot)
+# Bit[20]    - Support Reuse RDI Buffer
+# Bit[21]    - Support Limit MFNR Input Frames
+# Bit[22]    - Support Quickshot and HightQualityQuickShot Mixed Used
+# Bit[23]    - reserve
+# Bit[24]    - Mixed Quickshot Support SAT MFNR
+# Bit[25]    - Mixed Quickshot Support Front MFNR
+# Bit[26]    - Mixed Quickshot Support Macro Mode
+# Bit[27~31] - reserve
+HighQualityQuickShotSupportMask=0x3431D17
+
+
+# Bit Mask for HighQualityQuickShotDelayTime Configure
+# Bit[0 ~ 3]   - DelayTime XX * 100 ms of Bokeh MFNR in Back Camera
+# Bit[4 ~ 7]   - DelayTime XX * 100 ms of Bokeh MFNR in Front Camera
+# Bit[8 ~ 11]  - DelayTime XX * 100 ms of Back Normal Capture
+# Bit[12 ~ 15] - DelayTime XX * 100 ms of HDR in Front Camera
+# Bit[16 ~ 19] - DelayTime XX * 100 ms of HDR in Back Camera
+# Bit[20 ~ 23] - DelayTime XX * 100 ms of SuperNightSE in Back Camera
+# Bit[24 ~ 27] - DelayTime XX * 100 ms of SR in Back Camera
+# Bit[28 ~ 31] - DelayTime XX * 100 ms of Front Normal Capture
+# Bit[32 ~ 35] - DelayTime XX * 100 ms of Macro Mode in Back Camera
+# Bit[36 ~ 39] - DelayTime XX * 100 ms of Bokeh HDR in Back Camera
+# Bit[40 ~ 43] - DelayTime XX * 100 ms of HDRSR in Back Camera
+# Bit[44 ~ 47] - DelayTime XX * 100 ms of Professional Mode in Back Camera
+# Bit[48 ~ 63] - reserve
+QuickShotDelayTimeMask=0x20222222044
+
+#switch QSEE2 to QSEE, fix qmi_cci_client_free crash, JIRA:SHENG-4434
+enableNCSQSEE2=FALSE
+
+isNCSFlushFenceJobEnabled=TRUE
+
+enableEEPROMGolden=TRUE
+
+halBufferCacheMax=8
+
+#override Flash Current
+overrideFlashTorchCurrent=110
+overrideFlashVideoLightCurrent=110
+overrideFlashSnapshotLightCurrent=320
+overrideFlashPreviewLightCurrent=110
+overrideTorchScanCurrent=110
+#FlashTorchCurrentSwitch=TRUE
+#FlashTorchTemperatureLevels=1@40|2@60
+overrideFlashSnapshotLightDuration=5000

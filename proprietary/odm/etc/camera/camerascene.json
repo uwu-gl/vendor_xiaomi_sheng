@@ -1,0 +1,26 @@
+{
+    "configs": [
+        {
+            "name": "videocall_list",
+            "config": [
+                "default"
+            ]
+        },
+        {
+            "name": "highresolutionblob_list",
+            "config": [
+                "com.tencent.ttpic.module.camera.CameraActivity",
+                "com.linecorp.b612.android.activity.ActivityCamera",
+                "com.wudaokou.hippo.media.camera.CameraActivity",
+                "com.lemon.faceu.business.mainpage.MainActivity",
+                "com.mt.mtxx.camera.view.CameraActivity",
+                "com.light.beauty.mainpage.MainActivity",
+                "com.taobao.taopai.business.record.fragment.SocialRecordVideoActivity_Module_FullScreen",
+                "com.taobao.android.litecreator.modules.record.LCRecordActivity",
+                "com.baidu.homework.common.camera.NewCameraManyQuestionsActivity",
+                "com.meitu.myxj.selfie.merge.activity.SelfieCameraActivity",
+                "com.instagram.mainactivity.InstagramMainActivity"
+            ]
+        }
+    ]
+}

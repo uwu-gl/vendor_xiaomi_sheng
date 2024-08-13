@@ -1,0 +1,92 @@
+{
+    "PipelineName": "rearsupernightsnapshot",
+    "NodesList": {
+      "Node": [
+        {
+          "NodeName": "com.xiaomi.plugin.arcsoftsll",
+          "NodeInstance": "ArcsoftSLLInstance0",
+          "NodeProperty":[
+            {
+                "NodePropertyName":"NodeMask",
+                "NodePropertyValue":16
+            }
+          ]
+        },
+        {
+          "NodeName": "com.xiaomi.plugin.offlinepostproc",
+          "NodeInstance": "IdealRaw2YuvInstance0",
+          "NodeProperty":[
+            {
+                "NodePropertyName":"NodeMask",
+                "NodePropertyValue":4
+            }
+          ]
+        },
+        {
+          "NodeName": "com.xiaomi.plugin.portraitrepair",
+          "NodeInstance": "PortraitRepairInstance0",
+          "NodeProperty":[
+            {
+                "NodePropertyName":"NodeMask",
+                "NodePropertyValue":1
+            }
+          ]
+        }
+      ]
+    },
+    "PortLinkages": {
+      "Link": [
+        {
+          "SrcPort": {
+            "PortId": 0,
+            "NodeInstance": "SourceBuffer"
+          },
+          "DstPort": {
+            "PortId": 0,
+            "NodeInstance": "ArcsoftSLLInstance0",
+            "PortFormat": "RAW16"
+            }
+        },
+        {
+          "SrcPort": {
+            "PortId": 0,
+            "NodeInstance": "ArcsoftSLLInstance0",
+            "PortFormat": "RAW16"
+          },
+          "DstPort": {
+            "PortId": 0,
+            "NodeInstance": "IdealRaw2YuvInstance0",
+            "PortFormat": "RAW16"
+          }
+        },
+        {
+          "SrcPort": {
+            "PortId": 0,
+            "NodeInstance": "IdealRaw2YuvInstance0",
+            "PortFormat": "YUV420_NV12"
+          },
+          "DstPort": {
+            "PortId": 0,
+            "NodeInstance": "PortraitRepairInstance0",
+            "PortFormat": "YUV420_NV12",
+            "PortFollowType":2,
+            "FollowPortId":0
+          }
+        },
+        {
+        "SrcPort": {
+            "PortId": 0,
+            "NodeInstance": "PortraitRepairInstance0",
+            "PortFormat": "YUV420_NV12",
+            "PortFollowType":2,
+            "FollowPortId":0
+          },
+          "DstPort": {
+            "PortId": 0,
+            "NodeInstance": "SinkBuffer"
+          }
+        }
+      ]
+    }
+  }
+  

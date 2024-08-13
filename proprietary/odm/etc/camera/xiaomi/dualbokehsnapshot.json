@@ -1,0 +1,190 @@
+{
+    "PipelineName": "DualBokehSnapshot",
+    "NodesList": {
+        "Node": [
+            {
+                "NodeName": "com.xiaomi.plugin.capbokeh",
+                "NodeInstance": "CapbokehInstance0",
+                "NodeProperty": [
+                    {
+                        "NodePropertyName": "NodeMask",
+                        "NodePropertyValue": 4
+                    }
+                ]
+            },
+            {
+                "NodeName": "com.xiaomi.plugin.capdepth",
+                "NodeInstance": "CapdepthInstance0",
+                "OutputBufferNeedCheck": false,
+                "NodeProperty": [
+                    {
+                        "NodePropertyName": "NodeMask",
+                        "NodePropertyValue": 4
+                    }
+                ]
+            },
+            {
+                "NodeName": "com.xiaomi.plugin.tsskinbeautifier",
+                "NodeInstance": "CapbeautyInstance0",
+                "NodeProperty": [
+                    {
+                        "NodePropertyName": "NodeMask",
+                        "NodePropertyValue": 4
+                    }
+                ]
+            },
+            {
+                "NodeName": "com.xiaomi.plugin.virtual",
+                "NodeInstance": "virtualInstance0",
+                "NodeProperty": [
+                    {
+                        "NodePropertyName": "NodeMask",
+                        "NodePropertyValue": 512
+                    }
+                ]
+            },
+            {
+                "NodeName": "",
+                "NodeInstance": "virtualSinkbuffer2",
+                "NodeProperty": [
+                    {
+                        "NodePropertyName": "NodeMask",
+                        "NodePropertyValue": 1536
+                    }
+                ]
+            },
+            {
+                "NodeName": "com.xiaomi.plugin.portraitrepair",
+                "NodeInstance": "PortraitRepairInstance0",
+                "NodeProperty":[
+                  {
+                      "NodePropertyName":"NodeMask",
+                      "NodePropertyValue":1
+                  }
+                ]
+            }
+        ]
+    },
+    "PortLinkages": {
+        "Link": [
+            {
+                "SrcPort": {
+                    "PortId": 0,
+                    "NodeInstance": "SourceBuffer0"
+                },
+                "DstPort": {
+                    "PortId": 0,
+                    "NodeInstance": "virtualInstance0",
+                    "PortFormat": "YUV420_NV12"
+                }
+            },
+            {
+                "SrcPort": {
+                    "PortId": 0,
+                    "NodeInstance": "virtualInstance0",
+                    "PortFormat": "YUV420_NV12"
+                },
+                "DstPort": {
+                    "PortId": 0,
+                    "NodeInstance": "PortraitRepairInstance0",
+                    "PortFormat": "YUV420_NV12",
+                    "PortFollowType": 2,
+                    "FollowPortId": 0
+                }
+            },
+            {
+                "SrcPort": {
+                    "PortId": 0,
+                    "NodeInstance": "PortraitRepairInstance0",
+                    "PortFormat": "YUV420_NV12",
+                    "PortFollowType": 2,
+                    "FollowPortId": 0
+                },
+                "DstPort": {
+                    "PortId": 0,
+                    "NodeInstance": "CapbeautyInstance0",
+                    "PortFormat": "YUV420_NV12"
+                }
+            },
+            {
+                "SrcPort": {
+                    "PortId": 0,
+                    "NodeInstance": "CapbeautyInstance0",
+                    "PortFormat": "YUV420_NV12"
+                },
+                "DstPort": {
+                    "PortId": 0,
+                    "NodeInstance": "CapbokehInstance0",
+                    "PortFormat": "YUV420_NV12"
+                }
+            },
+            {
+                "SrcPort": {
+                    "PortId": 1,
+                    "NodeInstance": "virtualInstance0",
+                    "PortFormat": "YUV420_NV12"
+                },
+                "DstPort": {
+                    "PortId": 0,
+                    "NodeInstance": "CapdepthInstance0",
+                    "PortFormat": "YUV420_NV12"
+                }
+            },
+            {
+                "SrcPort": {
+                    "PortId": 1,
+                    "NodeInstance": "SourceBuffer1"
+                },
+                "DstPort": {
+                    "PortId": 1,
+                    "NodeInstance": "CapdepthInstance0",
+                    "PortFormat": "YUV420_NV12"
+                }
+            },
+            {
+                "SrcPort": {
+                    "PortId": 0,
+                    "NodeInstance": "CapdepthInstance0",
+                    "PortFormat": "YUV420_NV12"
+                },
+                "DstPort": {
+                    "PortId": 2,
+                    "NodeInstance": "virtualSinkbuffer2"
+                }
+            },
+            {
+                "SrcPort": {
+                    "PortId": 0,
+                    "NodeInstance": "virtualSinkbuffer2"
+                },
+                "DstPort": {
+                    "PortId": 1,
+                    "NodeInstance": "CapbokehInstance0",
+                    "PortFormat": "YUV420_NV12"
+                }
+            },
+            {
+                "SrcPort": {
+                    "PortId": 0,
+                    "NodeInstance": "CapbokehInstance0",
+                    "PortFormat": "YUV420_NV12"
+                },
+                "DstPort": {
+                    "PortId": 0,
+                    "NodeInstance": "SinkBuffer0"
+                }
+            },
+            {
+                "SrcPort": {
+                    "PortId": 1,
+                    "NodeInstance": "CapbokehInstance0",
+                    "PortFormat": "YUV420_NV12"
+                },
+                "DstPort": {
+                    "PortId": 1,
+                    "NodeInstance": "SinkBuffer1"
+                }
+            }
+        ]
+    }
+}

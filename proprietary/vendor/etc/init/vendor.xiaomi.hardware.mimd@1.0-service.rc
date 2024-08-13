@@ -1,0 +1,12 @@
+service mimd-service /vendor/bin/hw/vendor.xiaomi.hardware.mimd@1.0-service
+    class hal
+    user root
+    group system wakelock
+    task_profiles ServiceCapacityLow
+
+on post-fs-data
+    start mimd-service
+
+    on init
+    # Create cgroup mount point for mimd(xiaomi memory deamon)
+    mkdir /dev/memcg/mimd 0755 system system

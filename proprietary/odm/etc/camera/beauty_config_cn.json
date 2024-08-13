@@ -1,0 +1,139 @@
+{
+    "IdMap":{
+        "01":"skinSmooth",
+        "02":"whiten",
+        "03":"stereoPerception",
+        "04":"eyeBrowDye",
+        "05":"slimFace",
+        "06":"headNarrow",
+        "07":"hairPuffy",
+        "08":"enlargeEye",
+        "09":"nose",
+        "10":"noseTip",
+        "11":"temple",
+        "12":"cheekBone",
+        "13":"jaw",
+        "14":"chin",
+        "15":"lips",
+        "16":"hairline",
+        "17":"",
+        "18":"",
+        "19":"",
+        "20":""
+    },
+    "FrontCapture":  {
+        "BeautyMode": 0,
+        "Options": [
+            {
+                "Id": 01,
+                "Val": 40
+            },
+            {
+                "Id": 05,
+                "Val": 0
+            },
+            {
+                "Id": 08,
+                "Val": 0
+            }
+        ]
+    },
+    "FrontPortrait":{
+        "BeautyMode": 0,
+        "Options": [
+            {
+                "Id": 01,
+                "Val": 40
+            }
+        ]
+    },
+    "FrontRecordVideo": {
+        "BeautyMode": 0,
+        "Options": [
+            {
+                "Id": 01,
+                "Val": 0
+            }
+        ]
+    },
+    "FrontAIWatermark": {
+        "BeautyMode": 0,
+        "Options": [
+            {
+                "Id": 01,
+                "Val": 30
+            },
+            {
+                "Id": 05,
+                "Val": 0
+            },
+            {
+                "Id": 08,
+                "Val": 0
+            }
+        ]
+    },
+    "FrontShortVideo": {
+        "BeautyMode": 2,
+        "Options": [
+            {
+                "Id": 01,
+                "Val": 0
+            },
+            {
+                "Id": 05,
+                "Val": 0
+            },
+            {
+                "Id": 08,
+                "Val": 0
+            }
+        ]
+    },
+
+    "RearCapture": {
+        "BeautyMode": 2,
+        "Options": [
+            {
+                "Id": 01,
+                "Val": 0
+            }
+        ]
+    },
+    "RearPortrait": {
+        "BeautyMode": 2,
+        "Options": [
+            {
+                "Id": 01,
+                "Val": 0
+            }
+        ]
+    },
+    "RearRecordVideo": {
+        "BeautyMode": 2,
+        "Options": [
+            {
+                "Id": 01,
+                "Val": 40
+            }
+        ]
+    },
+    "RearShortVideo": {
+        "BeautyMode": 2,
+        "Options": [
+            {
+                "Id": 01,
+                "Val": 0
+            }
+        ]
+    },
+    "RearAIWatermark": {
+        "BeautyMode": 2,
+        "Options": [
+            {
+                "Id": 01,
+                "Val": 0
+            }
+        ]
+    }
+}
